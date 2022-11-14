@@ -1,5 +1,5 @@
 :root{
-    --main-color: rgb(25, 167, 56);
+    --main-color: rgb(25, 146, 167);
     --padding: 10px;
     --borderradius: 10px;
     --seperator:' : ';
@@ -11,7 +11,7 @@
     margin:0px;
     padding:0px;
     box-sizing:border-box;
-    animation-duration: 1000ms;
+    animation: forwards 1s;
     animation-timing-function: ease-in-out;
     animation-fill-mode: both;
     scroll-behavior: smooth;
@@ -78,8 +78,12 @@ body{
     margin: auto;
 }
 #booknameipt img{
+    padding: var(--padding);
   height:5vh;
   width: 5vh;
+}
+#booknameipt img:hover {
+    padding: 5px;
 }
 #bookid{
     height:100%;
@@ -125,6 +129,9 @@ body{
     height:80%;
     max-width:100%;
     border-radius:var(--borderradius);
+}
+.rotatingimg{
+    animation: rotate 1s infinite;
 }
 .btn{
     background-color:var(--main-color);
@@ -227,3 +234,4 @@ body{
         font-size: 80%;
     }
 }
+

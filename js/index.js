@@ -38,7 +38,14 @@ function addbtns() {
             document.getElementById("bookid").style.color = "black";
             document.getElementById("booknameipt").style.border = "10px solid #000000"
             document.getElementById("booknameipt").style.borderColor = "white";
-            if (event.code == "Enter") {
+            if (event.code == "Enter" || event.code == "NumpadEnter" || event.code =='13') {
+                // add the class rotatingimg to input image for 1 sec
+                setTimeout(() => {
+                    console.log(document.getElementById("schimg").value);
+                    document.getElementById("schimg").classList.add("rotatingimg");
+                }, 1000);
+                //remove the class rotatingimg to input image
+                document.getElementById("schimg").classList.remove("rotatingimg");
                 getbookdata();
             }
         }
