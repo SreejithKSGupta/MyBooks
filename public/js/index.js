@@ -85,7 +85,7 @@ function setbookdata(book) {
     var bookinfo = book.infoLink;
 
     if (bookimg == undefined) {
-        bookimg = 'res/defbook.png';
+        bookimg = 'res/defbook.webp';
     }
     if (bookdesc == undefined) {
         bookdesc = 'Not Available';
@@ -121,7 +121,7 @@ function setbookdata(book) {
     if (bookdesc.length > 200) {
         bookdesc = bookdesc.substring(0, 200) + "...";
     }
-    var bookdiv = '<div class="bookdata"><div class="bookimg"><img src="' + bookimg + '" alt="book image"><div class="btn" title="' + bookpreview + '" onclick="gotowindow()">Preview</div></div><div class="booktxt"><div class="bokkname">'+bookname+'</div> <div class="bookline bookauthor"><div>Author</div><div>' + bookauthor + '</div></div><div class="bookline bookpub"><div>Publisher</div><div>' + bookpub + '</div></div><div class="bookline bookpubdate"><div>Published Date</div><div>' + bookpubdate + '</div></div><div class="bookline bookpage"><div>Page Count</div><div>' + bookpage + '</div></div><div class="bookline booklang"><div>Language</div><div>' + booklang + '</div></div><div class="bookline bookcat"><div>Categories</div><div>' + bookcat + '</div></div><div class="bookline bookrate"><div>Rating</div><div>' + bookrate + '</div></div><div class="bookline bookdesc"><div>Description</div><div>' + bookdesc + '</div></div></div> </div>';
+    var bookdiv = '<div class="bookdata"><div class="bookimg"><img src="' + bookimg + '" alt="cover image of '+bookname+'"><div class="btn" title="' + bookpreview + '" onclick="gotowindow()">Preview</div></div><div class="booktxt"><div class="bokkname">'+bookname+'</div> <div class="bookline bookauthor"><div>Author</div><div>' + bookauthor + '</div></div><div class="bookline bookpub"><div>Publisher</div><div>' + bookpub + '</div></div><div class="bookline bookpubdate"><div>Published Date</div><div>' + bookpubdate + '</div></div><div class="bookline bookpage"><div>Page Count</div><div>' + bookpage + '</div></div><div class="bookline booklang"><div>Language</div><div>' + booklang + '</div></div><div class="bookline bookcat"><div>Categories</div><div>' + bookcat + '</div></div><div class="bookline bookrate"><div>Rating</div><div>' + bookrate + '</div></div><div class="bookline bookdesc"><div>Description</div><div>' + bookdesc + '</div></div></div> </div>';
     document.getElementById('datapart').innerHTML += bookdiv;
 }
 
