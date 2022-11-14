@@ -3,6 +3,16 @@ addbtns();
 // TODO //
 // change view for mobile
 // host to firebase
+// donto resize viewport when keyboard is open
+window.addEventListener('resize', function () {
+    if (document.activeElement.tagName == 'INPUT' || document.activeElement.tagName == 'TEXTAREA') {
+        window.setTimeout(function () {
+            if (document.activeElement) {
+                document.activeElement.scrollIntoViewIfNeeded();
+            }
+        }, 0);
+    }
+});
 
 function addbtns() {
     document.getElementById("bookid").focus();
