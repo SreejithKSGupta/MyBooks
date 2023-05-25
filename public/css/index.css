@@ -1,0 +1,228 @@
+:root{
+    --main-color: rgb(25, 143, 167);
+    --padding: 10px;
+    --borderradius: 10px;
+    --seperator:' : ';
+    --backgroundcolor: rgb(17, 17, 17);
+    --boxcolor: rgb(27, 27, 27);
+}
+
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing:border-box;
+    animation-duration: 1000ms;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: both;
+    scroll-behavior: smooth;
+    user-select: none;
+    cursor: pointer;
+}
+body{
+    background-color:var(--backgroundcolor);
+    color: aliceblue;
+    font-family: 'Poppins';
+    font-size: larger;
+    overscroll-behavior: none;
+}
+#content{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#header{
+    height: 10vh;
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
+    line-height: 10vh;
+}
+#midpart{
+    height:12vh;
+    width: 60vw;
+}
+#datapart{
+    height: 75vh;
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    overflow-x: hidden;
+    border-radius: var(--borderradius);
+}
+#footer{
+    height: 3vh;
+    font-size: 0.8rem;
+    line-height: 3vh;
+}
+#footer:hover{
+    font-weight: 200;
+    color: #2661ad;
+    cursor: pointer;
+    
+}
+/* midpart styling */
+
+#booknameipt {
+    height:50%;
+    width: 100%;
+    font-size: larger;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-radius: var(--borderradius);
+    margin: auto;
+}
+#booknameipt img{
+  height:100%;
+}
+#bookid{
+    height:100%;
+    width:80%;
+    border: none;
+    padding-left:var(--padding);
+    outline: none;
+    font-size: 120%;
+    border-radius:var(--borderradius);
+}
+
+/* presentation styling */
+
+
+.bookdata{
+    display: flex;
+    width:95%;
+    flex-direction:row;
+    justify-content: center;
+    margin-top: 2vh;
+    border-radius:var(--borderradius);
+    background-color:var(--boxcolor);
+    padding: var(--padding);
+}
+.ntfound{
+    font-size: larger;
+    font-weight: 300;
+    text-align: center;
+    font-style: italic;
+    color: #b3b3b3;
+}
+
+.bookimg{
+    height:100%;
+    width: 30%;
+    border-radius:var(--borderradius);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.bookimg img{
+    height:80%;
+    max-width:100%;
+    border-radius:var(--borderradius);
+}
+.btn{
+    background-color:var(--main-color);
+    color: white;
+    border-radius:var(--borderradius);
+    padding: var(--padding);
+    font-size: 120%;
+    font-weight: 300;
+    width: 50%;
+    text-align: center;
+}
+.btn:hover{
+    cursor: pointer;
+    filter: brightness(80%);
+   
+}
+
+.booktxt{
+    width:70%;
+    display: flex;
+    flex-direction: column;
+    align-items:left;
+    padding:var(--padding);
+}
+.bokkname{
+    font-size: 150%;
+    font-weight: 400;
+    width: 100%;
+   text-align: center;
+    color:var(--main-color);
+    text-decoration: underline;
+    padding:var(--padding);
+}
+.bookline{
+    display: flex;
+    flex-direction: row;
+}
+.bookline :nth-child(1){
+    margin-bottom:0.8vh;
+    width:25%;
+}
+.bookline :nth-child(2){
+    width: 75%;
+    user-select: text;
+}
+.bookline :nth-child(2)::before{
+    content: var(--seperator);
+    padding-right:var(--padding);
+    color: aliceblue;
+}
+
+/* webkit styling */
+::-webkit-scrollbar {
+    width: 0.5em;
+    height: 1em;
+    background-color:var(--boxcolor);
+    border-radius:var(--borderradius);
+}
+::-webkit-scrollbar-thumb{
+    border-radius:var(--borderradius);
+    background-color:white;
+    border: calc(var(--padding)/4) solid var(--main-color);
+}
+
+
+/* media query */
+@media screen and (max-width: 800px){
+    body{
+        font-size:100%;
+    }
+    .bokkname{
+        font-size: 120%;
+        font-weight: 200;
+    }
+    #midpart{
+        width: 80vw;
+    }
+    #datapart{
+        width: 90vw;
+    }
+    .bookdata{
+        flex-direction: column;
+        width:99%;
+    }
+    .bookimg{
+        width: 100%;
+    }
+    .bookimg img{
+        height:30vh;
+        max-width:80%;
+        margin:1vh;
+    }
+    .btn{
+        padding: 20px;
+    }
+    .booktxt{
+        width: 90%;
+    }
+    .bookline{
+        font-size: 80%;
+    }
+}
